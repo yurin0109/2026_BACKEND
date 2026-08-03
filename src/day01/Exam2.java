@@ -30,6 +30,7 @@ public static void main(String[] args) {
     System.out.println( str1 );
 
 
+
     // === 정수 ===
     // 4) byte : -128 ~ 127 저장하는 타입 , 1byte
     byte b1 = 100; System.out.println( b1 );

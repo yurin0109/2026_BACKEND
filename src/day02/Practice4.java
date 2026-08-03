@@ -12,12 +12,13 @@ public class Practice4 {
 첫 번째 점수: 40
 두 번째 점수: 55
 출력 예시: 성공 */
+/*
 System.out.print("<문제1> 점수1: "); int 점수1 = scan.nextInt();
 System.out.print("<문제1> 점수2: "); int 점수2 = scan.nextInt();  
 int 총점 = 점수1 + 점수2;
 if( 총점 >= 90 ){ System.out.println("성공"); }
 else{ System.out.println("실패"); }
-
+*/
 
 
 /*[문제 2] Scanner를 이용해 서로 다른 두 개의 정수를 입력받아, 더 큰 수를 출력하는 프로그램을 작성하시오.
@@ -25,6 +26,7 @@ else{ System.out.println("실패"); }
 첫 번째 정수: 10
 두 번째 정수: 25
 출력 예시: 더 큰 수: 25 */
+/* 
 System.out.print("첫 번째 정수: "); int 정수1 = scan.nextInt();
 System.out.print("\n두 번째 정수: "); int 정수2 = scan.nextInt();
 int 큰수=0;
@@ -35,16 +37,36 @@ else if(정수2>정수1){
     큰수 = 정수2;
 }
 System.out.println( 큰수 );
-
+*/
 
 
 /*[문제 3] Scanner를 이용해 아이디와 비밀번호를 String으로 입력받습니다.
-아이디가 'admin'이고 비밀번호가 '1234'와 모두 일치하면 '로그인 성공'을, 하나라도 다르다면 '로그인 실패'를 출력하는 프로그램을 작성하시오.
+아이디가 'admin'이고 비밀번호가 '1234'와 모두 일치하면 '로그인 성공'을, 
+하나라도 다르다면 '로그인 실패'를 출력하는 프로그램을 작성하시오.
 요구 조건: 문자열 비교는 .equals() 메소드를 사용하세요.
 입력 예시:
 아이디: admin
 비밀번호: 1234
 출력 예시: 로그인 성공 */
+
+
+// String id                ==>     id 라는 변수(공간)에 문자열을 저장하겠다.
+// scan.next();             ==>     문자열을 입력받겠다.
+// System.out.println();    ==>     터미널에 보여주겠다.
+// System.out.println(id);  ==>     터미널에 id 를 보여주겠다.
+
+System.out.println("아이디 입력");
+String id = scan.next();
+System.out.println("비번입력");
+String pw = scan.next();
+
+if(id.equals("admin") && pw.equals("1234")){ System.out.println("로그인 성공");}
+else{System.out.println("로그인 실패");}
+
+
+
+
+
 
 
 
@@ -60,23 +82,31 @@ System.out.println( 큰수 );
 비밀번호를 입력하세요: mypassword123
 출력 예시: 보안 등급: 강함 */
 
+// if(조건){조건이 만족할 때 실행시킬 것};
+System.out.println("보안등급 검사 번호 입력");
+String passward = scan.next();
+if(passward.length() < 8 ){System.out.println("보안 등급: 약함 (8자 이상으로 설정해주세요.)");}
+else if(passward.length() < 12 ){System.out.println("보안 등급: 보통");}
+else{System.out.println("보안 등급: 강함");};
 
 
 
 
 
-
-
-
-
-
-
-/*[문제 5] Scanner를 이용해 주민등록번호 13자리(-포함)를 문자열로 입력받습니다. 성별을 나타내는 8번째 숫자가 '1' 또는 '3'이면 '남자'를, '2' 또는 '4'이면 '여자'를 출력하는 프로그램을 작성하시오.
+/*[문제 5] Scanner를 이용해 주민등록번호 13자리(-포함)를 문자열로 입력받습니다. 
+성별을 나타내는 8번째 숫자가 '1' 또는 '3'이면 '남자'를, 
+'2' 또는 '4'이면 '여자'를 출력하는 프로그램을 작성하시오.
 요구 조건: 8번째 문자는 .charAt(7)으로 가져올 수 있습니다.
+
 입력 예시:
 주민등록번호(-포함) 13자리를 입력하세요: 950101-2******
 출력 예시: 여자 */
 
+System.out.println("주민등록번호(-포함) 13자리를 입력하세요: ");
+String num = scan.next();
+if(num.charAt(7)=='1' || num.charAt(7)=='3'){System.out.println("남자");}
+else if(num.charAt(7)=='2' || num.charAt(7)=='4'){System.out.println("여자");}
+else{System.out.println("잘못된 입력 입니다.");}
 
 
 
@@ -92,9 +122,8 @@ System.out.println( 큰수 );
 
 
 
-
-
-/*[문제 6] Scanner를 이용해 게임 점수를 정수로 입력받아, 아래 기준에 따라 지급될 상품을 출력하는 프로그램을 작성하시오.
+/*[문제 6] Scanner를 이용해 게임 점수를 정수로 입력받아,
+아래 기준에 따라 지급될 상품을 출력하는 프로그램을 작성하시오.
 900점 이상: 'A급 경품'
 700점 이상 900점 미만: 'B급 경품'
 500점 이상 700점 미만: 'C급 경품'
@@ -103,7 +132,22 @@ System.out.println( 큰수 );
 점수를 입력하세요: 750
 출력 예시: B급 경품 */
 
-/*[문제 7] Scanner를 이용해 사용자 역할(role)을 문자열로 입력받습니다. 역할에 따라 다른 접근 권한 메시지를 출력하는 프로그램을 작성하시오.
+System.out.println("게임 점수를 정수로 입력하세요.: ");
+int 점수 = scan.nextInt();
+if(점수 >= 900){System.out.println("A급 경품");}
+else if(점수 >= 700){System.out.println("B급 경품");}
+else if(점수 >= 500){System.out.println("C급 경품");}
+else{System.out.println("참가상");}
+
+
+
+
+
+
+
+
+/*[문제 7] Scanner를 이용해 사용자 역할(role)을 문자열로 입력받습니다. 
+역할에 따라 다른 접근 권한 메시지를 출력하는 프로그램을 작성하시오.
 admin: '모든 기능에 접근할 수 있습니다.'
 editor: '콘텐츠 수정 및 생성 기능에 접근할 수 있습니다.'
 viewer: '콘텐츠 조회만 가능합니다.'
@@ -112,7 +156,22 @@ viewer: '콘텐츠 조회만 가능합니다.'
 역할을 입력하세요: editor
 출력 예시: 콘텐츠 수정 및 생성 기능에 접근할 수 있습니다. */
 
-/*[문제 8] Scanner를 이용해 사용자의 나이를 정수로 입력받아, 아래 기준에 따라 입장료를 출력하는 프로그램을 작성하시오.
+
+System.out.println("역할을 입력하세요.: ");
+
+String role = scan.next();
+if(role.equals("admin")){System.out.println("모든 기능에 접근할 수 있습니다.");}
+else if(role.equals("editor")){System.out.println("콘텐츠 수정 및 생성 기능에 접근할 수 있습니다");}
+else if(role.equals("viewer")){System.out.println("콘텐츠 조회만 가능합니다.");}
+else{System.out.println("정의되지 않은 역할입니다.");}
+
+
+
+
+
+
+/*[문제 8] Scanner를 이용해 사용자의 나이를 정수로 입력받아,
+아래 기준에 따라 입장료를 출력하는 프로그램을 작성하시오.
 8세 미만: '무료'
 8세 이상 19세 이하: '5,000원'
 20세 이상 65세 미만: '10,000원'
@@ -120,6 +179,15 @@ viewer: '콘텐츠 조회만 가능합니다.'
 입력 예시:
 나이를 입력하세요: 22
 출력 예시: 10,000원 */
+
+
+
+
+
+
+
+
+
 
 /*[문제 9] Scanner를 이용해 하나의 점수를 입력받아 다음 조건에 따라 등급을 출력하는 프로그램을 작성하시오.
 90점 이상: 'A등급'
