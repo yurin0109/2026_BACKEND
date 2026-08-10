@@ -1,6 +1,7 @@
 package day09.종합예제.controller;
 
-// import java.util.ArrayList; 지피티 추가한 부분
+import java.util.ArrayList; 
+
 import day09.종합예제.model.dao.BoardDao;
 import day09.종합예제.model.dto.BoardDto;
 
@@ -18,14 +19,14 @@ public class BoardController {
         boolean result = bd.save( boardDto );
         // 3. DAO 에게 받은 결과를 VIEW에게 응답하기
         return result;   
-
+    }
     // [2] 게시물 전체 조회 컨트롤러
-    public ArrayList<BorardDto> findAll(){
+    public ArrayList<BoardDto> findAll(){
         // 1. view에게 매개변수 받는다. 현재는 없음
         // 2. dao에게 요청하고 응답 받는다.
         ArrayList<BoardDto> result = bd.findAll();
         // 3. dao에게 받은 결과물 view에게 반환한다/
         return result;
     }
-    }
+
 } // class end

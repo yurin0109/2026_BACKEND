@@ -1,7 +1,6 @@
 package day09.종합예제.view;
 
-// import java.util.ArrayList; 챗지피티 추가
-import java.net.Socket;
+import java.util.ArrayList; 
 import java.util.Scanner;
 
 import day09.종합예제.controller.BoardController;
@@ -15,8 +14,7 @@ public class BoardView {
     private Scanner scan = new Scanner( System.in );// * 모든 메소드에서 사용 가능한 입력객체
 
     // [*} 메인 입출력
-    // public void index(){ 이거를 아래로 바꾸래
-    BoardView.getInstance().index();
+    public void run(){
         while( true ){ // 무한루프
             System.out.println("1. 등록 2. 전체조회: ");
             int ch = scan.nextInt();
@@ -37,6 +35,7 @@ public class BoardView {
         // 4. 처리한다
         if( result ){ System.out.println("등록성공"); }
         else{ System.out.println("등록실패"); }
+    }
     
         // [2] 게시물 전체 출력
         public void findAll(){
