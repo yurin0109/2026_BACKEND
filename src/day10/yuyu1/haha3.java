@@ -19,6 +19,7 @@ public class haha3 { // class start
             System.out.println("선택>");
             int ch = scan.nextInt(); // int 정수형 타입 , .nextInt() 키보드로부터 입력받은 값 정수로 가져오기
             // [5] 제어문 , 코드 흐름 제어( 논리적인 사고 , 경우의 수 등 )
+            
             if( ch == 1 ){// 입력받은 값이 1이면
                 System.out.println("내용: "); String 내용 = scan.next(); // 입력받기
                 System.out.println("작성자: "); String 작성자 = scan.next(); //
@@ -32,7 +33,9 @@ public class haha3 { // class start
                     content3 = 내용; writer3 = 작성자;
                     System.out.println("[안내] 글쓰기 성공");
                 }else{ System.out.println("[경고] 게시물 등록할 공간이 없습니다."); }
+                
             } // if end
+
             else if( ch == 2 ){ // 입력받은 값이 2 이면
                 if( content1 != null && writer1 != null ) {//만약에 첫번째 게시물이 비어있지 않으면 출력
                     System.out.printf("작성자 : %s , 내용 : %s \n " , content1 , writer1 );
@@ -43,7 +46,32 @@ public class haha3 { // class start
                 if( content3 != null && writer3 != null ){
                     System.out.printf("작성자 : %s , 내용 : %s \n" , content3 , writer3 );
                 }
+                
             } // else if end
+
         } // for end
+
+
+// int a = 88;
+// 
+// if( a >= 90 ) { System.out.println("A등급"); }          // X
+// else if( a >= 80 ) { System.out.println("B등급"); }     // O
+// else if( a >= 70 ) { System.out.println("C등급"); }     // X
+// else{ System.out.println("탈락입니다."); }              // X
+// 
+// if( a >= 90 ) { System.out.println("A등급"); }      // X
+// 
+// if( a >= 80 ) { System.out.println("B등급"); }      // O
+// 
+// if( a >= 70 ) { System.out.println("C등급"); }      // O
+// else{ System.out.println("탈락입니다."); }          // X
+
+
     } // main end
 } // class end
+
+
+
+
+
+
