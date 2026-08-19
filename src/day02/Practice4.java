@@ -114,14 +114,6 @@ else{System.out.println("잘못된 입력 입니다.");}
 
 
 
-
-
-
-
-
-
-
-
 /*[문제 6] Scanner를 이용해 게임 점수를 정수로 입력받아,
 아래 기준에 따라 지급될 상품을 출력하는 프로그램을 작성하시오.
 900점 이상: 'A급 경품'
@@ -138,10 +130,6 @@ if(점수 >= 900){System.out.println("A급 경품");}
 else if(점수 >= 700){System.out.println("B급 경품");}
 else if(점수 >= 500){System.out.println("C급 경품");}
 else{System.out.println("참가상");}
-
-
-
-
 
 
 
@@ -164,9 +152,6 @@ if(role.equals("admin")){System.out.println("모든 기능에 접근할 수 있�
 else if(role.equals("editor")){System.out.println("콘텐츠 수정 및 생성 기능에 접근할 수 있습니다");}
 else if(role.equals("viewer")){System.out.println("콘텐츠 조회만 가능합니다.");}
 else{System.out.println("정의되지 않은 역할입니다.");}
-
-
-
 
 
 
