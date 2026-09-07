@@ -1,13 +1,12 @@
 package step.step4;
 
-public class BoardDto {
- 
+public class BoardDto2 {
     private String content;
     private String writer;
 
-    public BoardDto() {}
+    public BoardDto2() {}
 
-    public BoardDto(String content, String writer) {
+    public BoardDto2(String content, String writer) {
         this.content = content;
         this.writer = writer;
     }
@@ -22,10 +21,8 @@ public class BoardDto {
 
     @Override
     public String toString() {
-        return "BoardDto [content=" + content + ", writer=" + writer + "]";
+        return "BoardDto2 [content=" + content + ", writer=" + writer + "]";
     }
-
     
+
 }
-
-    
